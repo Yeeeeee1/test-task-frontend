@@ -58,3 +58,11 @@ function changeScreen(e) {
 
   localStorage.setItem("backgroundColor", document.body.style.backgroundColor);
 }
+
+const pointerElem = document.querySelector(".container__eclipse");
+const boxElem = document.querySelector(".container__eclipse-box");
+
+boxElem.addEventListener("mousemove", function (e) {
+  pointerElem.style.top = e.clientY - 100 + "px";
+  pointerElem.style.left = e.clientX - 400 + "px";
+});
