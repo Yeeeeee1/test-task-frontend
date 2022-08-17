@@ -65,7 +65,7 @@ const boxElems = [...document.querySelectorAll(".container__eclipse-box")];
 boxElems.map((value, i) => {
   value.addEventListener("mousemove", function (e) {
     pointerElems[i].style.top = e.clientY - 300 + "px";
-    pointerElems[i].style.left = e.clientX - 400 + "px";
+    pointerElems[i].style.left = e.clientX - 700 + "px";
   });
 
   value.addEventListener("mouseout", function (e) {
