@@ -59,10 +59,17 @@ function changeScreen(e) {
   localStorage.setItem("backgroundColor", document.body.style.backgroundColor);
 }
 
-const pointerElem = document.querySelector(".container__eclipse");
-const boxElem = document.querySelector(".container__eclipse-box");
+const pointerElems = [...document.querySelectorAll(".container__eclipse")];
+const boxElems = [...document.querySelectorAll(".container__eclipse-box")];
 
-boxElem.addEventListener("mousemove", function (e) {
-  pointerElem.style.top = e.clientY - 100 + "px";
-  pointerElem.style.left = e.clientX - 400 + "px";
+boxElems.map((value, i) => {
+  value.addEventListener("mousemove", function (e) {
+    pointerElems[i].style.top = e.clientY - 300 + "px";
+    pointerElems[i].style.left = e.clientX - 400 + "px";
+  });
+
+  value.addEventListener("mouseout", function (e) {
+    pointerElems[i].style.top = "0px";
+    pointerElems[i].style.left = "0px";
+  });
 });

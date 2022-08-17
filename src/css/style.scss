@@ -52,9 +52,23 @@ body {
     position: absolute;
     width: 800px;
     height: 600px;
-    left: 231px;
-    top: -112px;
-    transition: 1s;
+
+    transition: all 1s;
+
+    &:first-child {
+      left: 231px;
+      top: -112px;
+    }
+
+    &:nth-child(2) {
+      left: 20px;
+      top: 648.81px;
+    }
+
+    &:nth-child(3) {
+      left: 1084px;
+      top: 595.42px;
+    }
   }
 
   &__heading2 {
@@ -146,15 +160,11 @@ body {
     &:nth-child(2) {
       width: 222.85px;
       height: 222.85px;
-      left: 20px;
-      top: 648.81px;
     }
 
     &:nth-child(3) {
       width: 330.66px;
       height: 330.66px;
-      left: 1084px;
-      top: 595.42px;
       z-index: -3;
     }
 

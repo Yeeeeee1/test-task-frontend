@@ -37,12 +37,25 @@ body::-webkit-scrollbar {
 
 .container__eclipse-box {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  height: 600px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.container__eclipse-box:first-child {
   left: 231px;
   top: -112px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+}
+
+.container__eclipse-box:nth-child(2) {
+  left: 20px;
+  top: 648.81px;
+}
+
+.container__eclipse-box:nth-child(3) {
+  left: 1084px;
+  top: 595.42px;
 }
 
 .container__heading2 {
@@ -144,15 +157,11 @@ body::-webkit-scrollbar {
 .container__eclipse:nth-child(2) {
   width: 222.85px;
   height: 222.85px;
-  left: 20px;
-  top: 648.81px;
 }
 
 .container__eclipse:nth-child(3) {
   width: 330.66px;
   height: 330.66px;
-  left: 1084px;
-  top: 595.42px;
   z-index: -3;
 }
 
