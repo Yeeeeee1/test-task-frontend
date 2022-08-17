@@ -1,6 +1,7 @@
 $primary-font: "Montserrat", sans-serif;
 $primary-color: #f5f5f5;
 $primary-border: rgba(226, 226, 226, 0.5);
+$primary-border-disabled: #f5f5f560;
 
 @mixin fontH {
   font-style: normal;
@@ -47,10 +48,22 @@ body {
   margin: 100px 0 0 100px;
   transition: all 1s;
 
+  &__eclipse-box {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 231px;
+    top: -112px;
+    transition: 0.3s;
+  }
+
   &__heading2 {
+    opacity: 0;
     margin: 20px 0 0 20px;
     width: 628px;
     height: 80px;
+    transform: translateY(600px);
+    transition: all 2.5s;
 
     & h1 {
       line-height: 40px;
@@ -60,6 +73,10 @@ body {
   &__text2 {
     width: 628px;
     height: 78px;
+    opacity: 0;
+    transform: translateY(400px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
 
     & p {
       @include fontP();
@@ -117,12 +134,13 @@ body {
   &__eclipse {
     position: absolute;
     z-index: -1;
+    top: 0;
+    left: 0;
+    transition: all 1s;
 
     &:first-child {
       width: 282.76px;
       height: 282.76px;
-      left: 231px;
-      top: -112px;
     }
 
     &:nth-child(2) {
@@ -186,6 +204,10 @@ body {
     margin: 20px 0 0 20px;
     border: 1px solid $primary-border;
     background: rgba(0, 37, 23, 0.2);
+    opacity: 0;
+    transform: translateY(600px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
   }
 
   &__section {
@@ -214,6 +236,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 20px 0 0 20px;
+    opacity: 0;
+    transform: translateY(600px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
 
     & img {
       cursor: pointer;
@@ -232,6 +258,8 @@ body {
     margin: 20px 0 0 20px;
     width: 570px;
     height: 80px;
+    transform: translateY(600px);
+    transition: all 2.5s;
 
     & h1 {
       line-height: 40px;
@@ -241,6 +269,9 @@ body {
   &__text {
     width: 530px;
     height: 78px;
+    transform: translateY(400px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
 
     & p {
       @include fontP();
@@ -263,4 +294,8 @@ h1 {
 .center {
   font-size: 60px;
   line-height: 60px;
+}
+
+.disabled {
+  border: 1px solid $primary-border-disabled !important;
 }
