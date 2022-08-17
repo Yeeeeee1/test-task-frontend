@@ -1,5 +1,7 @@
 import "../css/style.css";
 
+// document.body.style.backgroundColor = localStorage.getItem("backgroundColor");
+
 const container = [...document.querySelectorAll(".container")];
 const arrows = [...document.querySelectorAll(".arrow")];
 
@@ -25,4 +27,6 @@ function changeScreen(e) {
     container[1].style.margin = "100px 0 0 100px";
     document.body.style.backgroundColor = "#8DBDBA";
   }
+
+  localStorage.setItem("backgroundColor", document.body.style.backgroundColor);
 }
