@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 const container = Array.from(document.querySelectorAll<HTMLElement>('.container'));
 const arrows = Array.from(document.querySelectorAll<HTMLElement>('.arrow'));
 const heading = document.querySelector<HTMLElement>('.container__heading');
