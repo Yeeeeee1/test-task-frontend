@@ -1,0 +1,297 @@
+$primary-font: 'Nunito sans', sans-serif;
+$primary-color: #f5f5f5;
+$primary-border: rgba(226, 226, 226, 0.5);
+$primary-border-disabled: #f5f5f560;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin fontH {
+  font-style: normal;
+  font-weight: 500;
+  color: $primary-color;
+}
+
+@mixin fontP {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: $primary-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  background-color: #8dbdba;
+  font-family: $primary-font;
+  transition: all 1s;
+  overflow-x: hidden;
+  cursor: url(../img/cursor-usual.png) 20 20, auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.containers {
+  width: 4254px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  margin: 100px 0 0 100px;
+  transition: all 1s;
+
+  &__eclipse-box {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+
+    transition: all 3s;
+
+    &:first-child {
+      left: 150px;
+      top: -112px;
+    }
+
+    &:nth-child(2) {
+      left: 20px;
+      top: 648.81px;
+    }
+
+    &:nth-child(3) {
+      left: 1084px;
+      top: 595.42px;
+    }
+  }
+
+  &__heading2 {
+    opacity: 0;
+    margin: 20px 0 0 20px;
+    width: 628px;
+    height: 80px;
+    transform: translateY(600px);
+    transition: all 2.5s;
+
+    & h1 {
+      line-height: 40px;
+    }
+  }
+
+  &__text2 {
+    width: 628px;
+    height: 78px;
+    opacity: 0;
+    transform: translateY(400px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
+
+    & p {
+      @include fontP();
+      margin: 16px 0 0 20px;
+    }
+  }
+
+  &__eclipse2 {
+    position: absolute;
+    transition: all 3s;
+
+    &:first-child {
+      width: 330.66px;
+      height: 330.66px;
+      left: -152px;
+      top: -83.23px;
+      z-index: -3;
+    }
+
+    &:nth-child(2) {
+      width: 330.66px;
+      height: 330.66px;
+      left: 588px;
+      top: 68.87px;
+      z-index: -3;
+    }
+
+    &:nth-child(3) {
+      width: 330.66px;
+      height: 330.66px;
+      left: 1064px;
+      top: 611.25px;
+    }
+
+    background: linear-gradient(131.29deg, rgba(165, 185, 255, 0.24) 1.1%, rgba(119, 124, 138, 0) 108.32%),
+      radial-gradient(32.42% 32.42% at 46.83% 18.92%, rgba(255, 255, 255, 0.147) 0%, rgba(62, 75, 119, 0) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      linear-gradient(0deg, rgba(141, 104, 177, 0.4), rgba(141, 104, 177, 0.4));
+    background-blend-mode: normal, normal, normal, multiply;
+    box-shadow: 29px 54px 56px rgba(36, 52, 102, 0.25), inset 2.29395px 2.29395px 2.29395px rgba(84, 101, 157, 0.1);
+    backdrop-filter: blur(60px);
+
+    border-radius: 50%;
+    transform: rotate(-20.99deg);
+  }
+
+  &__eclipse {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+
+    &:first-child {
+      width: 282.76px;
+      height: 282.76px;
+    }
+
+    &:nth-child(2) {
+      width: 222.85px;
+      height: 222.85px;
+    }
+
+    &:nth-child(3) {
+      width: 330.66px;
+      height: 330.66px;
+      z-index: -3;
+    }
+
+    background: linear-gradient(131.29deg, rgba(225, 255, 244, 0.3) 1.1%, rgba(20, 54, 41, 0) 108.32%),
+      radial-gradient(32.42% 32.42% at 46.83% 18.92%, rgba(255, 255, 255, 0.147) 0%, rgba(100, 117, 110, 0) 100%),
+      linear-gradient(0deg, rgba(68, 104, 90, 0.44), rgba(68, 104, 90, 0.44));
+    background-blend-mode: normal, normal, normal, multiply;
+    box-shadow: 8px 24px 60px rgba(21, 53, 30, 0.1), inset 2.29395px 2.29395px 2.29395px rgba(73, 100, 87, 0.05);
+    backdrop-filter: blur(60px);
+
+    border-radius: 50%;
+    transform: rotate(-20.99deg);
+  }
+
+  &__swipe-container {
+    background: linear-gradient(0deg, rgba(0, 37, 23, 0.3), rgba(0, 37, 23, 0.3));
+    background-blend-mode: normal, multiply;
+    border: 0.5px solid rgba(64, 89, 80, 0.5);
+    box-shadow: inset 0.860527px 0.860527px 0.860527px rgba(53, 74, 66, 0.2);
+    overflow: hidden;
+    backdrop-filter: blur(30px);
+
+    padding: 1px;
+    width: 668px;
+    height: 432px;
+    margin-top: 190px;
+  }
+
+  &__sections {
+    display: flex;
+    align-items: center;
+    width: 588px;
+    height: 94px;
+    margin: 20px 0 0 20px;
+    border: 1px solid $primary-border;
+    background: rgba(0, 37, 23, 0.2);
+    opacity: 0;
+    transform: translateY(600px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid $primary-border;
+    width: 33.3%;
+    height: 100%;
+
+    & h3 {
+      @include fontH();
+      line-height: 28px;
+      margin-left: 20px;
+    }
+
+    & h5 {
+      @include fontH();
+      line-height: 18px;
+      margin-left: 20px;
+    }
+  }
+
+  &__arrows {
+    width: 112px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 20px;
+    opacity: 0;
+    transform: translateY(600px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
+
+    & img {
+      cursor: url(../img/cursor-hover.png) 30 30, auto;
+      border: 1px solid $primary-color;
+      padding: 16px;
+      width: 16px;
+      height: 16px;
+
+      &:first-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__heading {
+    margin: 20px 0 0 20px;
+    width: 570px;
+    height: 80px;
+    transform: translateY(600px);
+    transition: all 2.5s;
+
+    & h1 {
+      line-height: 40px;
+    }
+  }
+
+  &__text {
+    width: 530px;
+    height: 78px;
+    transform: translateY(400px);
+    transition: all 2.5s;
+    transition-delay: 2.5s;
+
+    & p {
+      @include fontP();
+      margin: 16px 0 0 20px;
+    }
+  }
+
+  &__comp {
+    position: absolute;
+    left: 337.66px;
+    top: 147.58px;
+    z-index: -2;
+  }
+}
+
+h1 {
+  @include fontH();
+}
+
+.center {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.disabled {
+  border: 1px solid $primary-border-disabled !important;
+
+  &:hover {
+    cursor: url(../img/cursor-hover.png) 20 20, auto;
+  }
+}
