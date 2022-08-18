@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "",
   "compilerOptions": {
     "declaration": false,
     "sourceMap": false
