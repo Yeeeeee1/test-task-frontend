@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +7,11 @@
 body {
   display: -webkit-box;
   background-color: #8dbdba;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito sans", sans-serif;
   -webkit-transition: all 1s;
   transition: all 1s;
   overflow-x: hidden;
+  cursor: url(../img/cursor-usual.png), auto;
 }
 
 body::-webkit-scrollbar {
@@ -39,12 +41,12 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 800px;
   height: 600px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 .container__eclipse-box:first-child {
-  left: 231px;
+  left: 150px;
   top: -112px;
 }
 
@@ -86,7 +88,7 @@ body::-webkit-scrollbar {
 }
 
 .container__text2 p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -97,6 +99,8 @@ body::-webkit-scrollbar {
 
 .container__eclipse2 {
   position: absolute;
+  -webkit-transition: all 3s;
+  transition: all 3s;
   background: linear-gradient(131.29deg, rgba(165, 185, 255, 0.24) 1.1%, rgba(119, 124, 138, 0) 108.32%), radial-gradient(32.42% 32.42% at 46.83% 18.92%, rgba(255, 255, 255, 0.147) 0%, rgba(62, 75, 119, 0) 100%), linear-gradient(0deg, rgba(141, 104, 177, 0.4), rgba(141, 104, 177, 0.4));
   background-blend-mode: normal, normal, normal, multiply;
   -webkit-box-shadow: 29px 54px 56px rgba(36, 52, 102, 0.25), inset 2.29395px 2.29395px 2.29395px rgba(84, 101, 157, 0.1);
@@ -253,7 +257,7 @@ body::-webkit-scrollbar {
 }
 
 .container__arrows img {
-  cursor: pointer;
+  cursor: url(../img/cursor-hover.png) 20 20, auto;
   border: 1px solid #f5f5f5;
   padding: 16px;
   width: 16px;
@@ -291,7 +295,7 @@ body::-webkit-scrollbar {
 }
 
 .container__text p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -320,5 +324,9 @@ h1 {
 
 .disabled {
   border: 1px solid #f5f5f560 !important;
+}
+
+.disabled:hover {
+  cursor: url(../img/cursor-hover.png), auto;
 }
 /*# sourceMappingURL=style.css.map */
