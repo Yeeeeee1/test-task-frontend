@@ -59,15 +59,16 @@ function changeScreen(e: Event) {
 const boxElems = Array.from(document.querySelectorAll('.container__eclipse-box'));
 const initCoords = [{ left: 0, top: 0 }];
 
-boxElems.map((value: HTMLElement) => {
-  value.addEventListener('mousemove', function (e: MouseEvent) {
-    const pointerElem = value.childNodes[0] as HTMLElement;
-    pointerElem.style.top = e.clientY - 300 + 'px';
-    pointerElem.style.left = e.clientX - 700 + 'px';
+boxElems.map((value: Element) => {
+  const pointerElem = value.childNodes[0] as HTMLElement;
+
+  value.addEventListener('mousemove', function (e: Event) {
+    const event = e as MouseEvent;
+    pointerElem.style.top = event.clientY - 300 + 'px';
+    pointerElem.style.left = event.clientX - 700 + 'px';
   });
 
-  value.addEventListener('mouseout', function (e: MouseEvent) {
-    const pointerElem = value.childNodes[0] as HTMLElement;
+  value.addEventListener('mouseout', function () {
     pointerElem.style.top = '0px';
     pointerElem.style.left = '0px';
   });

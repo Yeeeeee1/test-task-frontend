@@ -1,9 +1,9 @@
-$primary-font: "Nunito sans", sans-serif;
+$primary-font: 'Nunito sans', sans-serif;
 $primary-color: #f5f5f5;
 $primary-border: rgba(226, 226, 226, 0.5);
 $primary-border-disabled: #f5f5f560;
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @mixin fontH {
   font-style: normal;
@@ -31,7 +31,7 @@ body {
   font-family: $primary-font;
   transition: all 1s;
   overflow-x: hidden;
-  cursor: url(../img/cursor-usual.png), auto;
+  cursor: url(../img/cursor-usual.png) 20 20, auto;
 
   &::-webkit-scrollbar {
     display: none;
@@ -128,21 +128,12 @@ body {
       top: 611.25px;
     }
 
-    background: linear-gradient(
-        131.29deg,
-        rgba(165, 185, 255, 0.24) 1.1%,
-        rgba(119, 124, 138, 0) 108.32%
-      ),
-      radial-gradient(
-          32.42% 32.42% at 46.83% 18.92%,
-          rgba(255, 255, 255, 0.147) 0%,
-          rgba(62, 75, 119, 0) 100%
-        )
+    background: linear-gradient(131.29deg, rgba(165, 185, 255, 0.24) 1.1%, rgba(119, 124, 138, 0) 108.32%),
+      radial-gradient(32.42% 32.42% at 46.83% 18.92%, rgba(255, 255, 255, 0.147) 0%, rgba(62, 75, 119, 0) 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
       linear-gradient(0deg, rgba(141, 104, 177, 0.4), rgba(141, 104, 177, 0.4));
     background-blend-mode: normal, normal, normal, multiply;
-    box-shadow: 29px 54px 56px rgba(36, 52, 102, 0.25),
-      inset 2.29395px 2.29395px 2.29395px rgba(84, 101, 157, 0.1);
+    box-shadow: 29px 54px 56px rgba(36, 52, 102, 0.25), inset 2.29395px 2.29395px 2.29395px rgba(84, 101, 157, 0.1);
     backdrop-filter: blur(60px);
 
     border-radius: 50%;
@@ -172,20 +163,11 @@ body {
       z-index: -3;
     }
 
-    background: linear-gradient(
-        131.29deg,
-        rgba(225, 255, 244, 0.3) 1.1%,
-        rgba(20, 54, 41, 0) 108.32%
-      ),
-      radial-gradient(
-        32.42% 32.42% at 46.83% 18.92%,
-        rgba(255, 255, 255, 0.147) 0%,
-        rgba(100, 117, 110, 0) 100%
-      ),
+    background: linear-gradient(131.29deg, rgba(225, 255, 244, 0.3) 1.1%, rgba(20, 54, 41, 0) 108.32%),
+      radial-gradient(32.42% 32.42% at 46.83% 18.92%, rgba(255, 255, 255, 0.147) 0%, rgba(100, 117, 110, 0) 100%),
       linear-gradient(0deg, rgba(68, 104, 90, 0.44), rgba(68, 104, 90, 0.44));
     background-blend-mode: normal, normal, normal, multiply;
-    box-shadow: 8px 24px 60px rgba(21, 53, 30, 0.1),
-      inset 2.29395px 2.29395px 2.29395px rgba(73, 100, 87, 0.05);
+    box-shadow: 8px 24px 60px rgba(21, 53, 30, 0.1), inset 2.29395px 2.29395px 2.29395px rgba(73, 100, 87, 0.05);
     backdrop-filter: blur(60px);
 
     border-radius: 50%;
@@ -193,11 +175,7 @@ body {
   }
 
   &__swipe-container {
-    background: linear-gradient(
-      0deg,
-      rgba(0, 37, 23, 0.3),
-      rgba(0, 37, 23, 0.3)
-    );
+    background: linear-gradient(0deg, rgba(0, 37, 23, 0.3), rgba(0, 37, 23, 0.3));
     background-blend-mode: normal, multiply;
     border: 0.5px solid rgba(64, 89, 80, 0.5);
     box-shadow: inset 0.860527px 0.860527px 0.860527px rgba(53, 74, 66, 0.2);
@@ -256,7 +234,7 @@ body {
     transition-delay: 2.5s;
 
     & img {
-      cursor: url(../img/cursor-hover.png) 20 20, auto;
+      cursor: url(../img/cursor-hover.png) 30 30, auto;
       border: 1px solid $primary-color;
       padding: 16px;
       width: 16px;
@@ -314,6 +292,6 @@ h1 {
   border: 1px solid $primary-border-disabled !important;
 
   &:hover {
-    cursor: url(../img/cursor-hover.png), auto;
+    cursor: url(../img/cursor-hover.png) 20 20, auto;
   }
 }
